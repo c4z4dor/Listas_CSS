@@ -1,0 +1,241 @@
+.resumen {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  position: relative;
+  height: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/*------------------- resumen general -------------*/
+
+.resumen .resumen__general {
+  width: 30%;
+  max-width: 450px;
+  height: auto;
+  background-color: var(--Gris-suave);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+
+  font-size: 12px;
+}
+
+.resumen .resumen__general .resumen__general--datos {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  margin-bottom: 10px;
+}
+
+.resumen .resumen__general .resumen__general--datos p:first-child {
+  margin: auto;
+  margin-left: 0;
+}
+
+.resumen .resumen__general .resumen__general--datos .linea-espacio {
+  width: 50%;
+  margin-right: 15px;
+}
+
+.resumen .resumen__general .resumen__general--efectividad {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.resumen .resumen__general .enviados .linea-espacio {
+  border-bottom: 2px solid var(--azul);
+}
+.resumen .resumen__general .recibidos .linea-espacio {
+  border-bottom: 2px solid var(--verde);
+}
+.resumen .resumen__general .no-recibidos .linea-espacio {
+  border-bottom: 2px solid var(--Rojo);
+}
+
+.resumen .resumen__general .respondidos .linea-espacio {
+  border-bottom: 2px solid var(--Amarillo);
+}
+
+/* -------resumen especifico -----------------*/
+
+.resumen .resumen__especifico {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.resumen .resumen__especifico .resumen__especifico__caja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  align-items: center;
+  height: 100%;
+  background-color: var(--Gris-suave);
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.resumen .resumen__especifico .resumen__especifico__caja:hover {
+  transform: scale(1.1);
+}
+
+.resumen .resumen__especifico .resumen__especifico__caja--img {
+  width: 100%;
+}
+
+.resumen .resumen__especifico .resumen__especifico__caja--img img {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  margin-bottom: 15px;
+}
+
+.resumen .resumen__especifico .resumen__especifico__caja--parafos {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 10px;
+  width: 85%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.resumen .resumen__especifico .resumen__especifico__caja--parafos p {
+  display: inline-block;
+}
+
+.resumen
+  .resumen__especifico
+  .resumen__especifico__caja--parafos
+  p:first-child {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.resumen
+  .resumen__especifico
+  .resumen__especifico__caja--parafos
+  p:nth-child(2) {
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+  align-self: flex-end;
+  line-height: 1;
+}
+
+.resumen
+  .resumen__especifico
+  .enviados
+  .resumen__especifico__caja--parafos
+  p:last-child {
+  color: var(--azul);
+}
+
+.resumen
+  .resumen__especifico
+  .recibidos
+  .resumen__especifico__caja--parafos
+  p:last-child {
+  color: var(--verde);
+}
+
+.resumen
+  .resumen__especifico
+  .no-recibidos
+  .resumen__especifico__caja--parafos
+  p:last-child {
+  color: var(--Rojo);
+}
+
+.resumen
+  .resumen__especifico
+  .respondidos
+  .resumen__especifico__caja--parafos
+  p:last-child {
+  color: var(--Amarillo);
+}
+
+.resumen .resumen__especifico .resumen__especifico__caja--parafos p:last-child {
+  align-self: flex-end;
+}
+
+.resumen .resumen__especifico .enviados .resumen__especifico__caja--parafos {
+  border-left: 2px solid var(--azul);
+}
+
+.resumen .resumen__especifico .recibidos .resumen__especifico__caja--parafos {
+  border-left: 2px solid var(--verde);
+}
+
+.resumen
+  .resumen__especifico
+  .no-recibidos
+  .resumen__especifico__caja--parafos {
+  border-left: 2px solid var(--Rojo);
+}
+
+.resumen .resumen__especifico .respondidos .resumen__especifico__caja--parafos {
+  border-left: 2px solid var(--Amarillo);
+}
+
+/*-------------- media querys ---------------- */
+@media screen and (max-width: 1024px) {
+  .resumen .resumen__general .resumen__general--datos .linea-espacio {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resumen {
+    flex-direction: column;
+  }
+  .resumen .resumen__general {
+    width: 100%;
+  }
+  .resumen .resumen__general .resumen__general--datos .linea-espacio {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .resumen {
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 0;
+
+    height: 710px;
+  }
+
+  .resumen .resumen__general {
+    margin-bottom: 25px;
+  }
+  .resumen .resumen__especifico {
+    grid-template-columns: auto;
+    height: 100%;
+  }
+
+  .resumen .resumen__especifico .resumen__especifico__caja--parafos {
+    width: auto;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+
+  .resumen
+    .resumen__especifico
+    .resumen__especifico__caja--parafos
+    p:first-child {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
